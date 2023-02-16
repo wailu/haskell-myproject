@@ -1,8 +1,8 @@
 module Main where
 
-import Lib (someFunc, Writer (runWriter), tell)
+import Lib (Writer (runWriter), someFunc, tell)
 
-foo:: Writer String Int
+foo :: Writer String Int
 foo = do
   tell "starting computation"
   let x = 1 + 2
@@ -13,7 +13,7 @@ foo = do
 
 printList :: [String] -> IO ()
 printList [] = return ()
-printList (x:xs) = do
+printList (x : xs) = do
   putStrLn x
   printList xs
 
